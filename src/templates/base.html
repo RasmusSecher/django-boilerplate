@@ -1,17 +1,19 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="aqua" lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Django-Boilerplate</title>
-    <link rel="stylesheet" href="{% static 'js/base.js'%}">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.13.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
   </head>
 
   <body>
-    <h1>Oh, Hi Mark.</h1>
-	<script src="{% static 'js/base.js'%}"></script>
+    {% block content %}Oh, Hi Mark.{% endblock content %}
+	<script src="{% static 'javascript/base.js'%}"></script>
   </body>
 </html>

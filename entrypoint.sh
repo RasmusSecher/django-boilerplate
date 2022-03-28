@@ -1,14 +1,18 @@
 #!/bin/bash
-echo "--- Initiating entrypoint.sh ---"
 echo ""
-echo "Start makemigrations"
+echo "-------------------------------------"
+echo "--- Initiating entrypoint.sh      ---"
+echo ""
+echo "--- Begin makemigrations          ---"
 python src/manage.py makemigrations
-echo "Makemigrations finished"
+echo "--- End makemigrations            ---"
 echo ""
-echo "Start migrate"
+echo "--- Begin migrate                 ---"
 python src/manage.py migrate --no-input
-echo "Migrate finished"
+echo "--- End finished                  ---"
 echo ""
-echo "--- Finished entrypoint.sh ---"
+echo "--- Finished entrypoint.sh        ---"
+echo "-------------------------------------"
+echo ""
 
 exec "$@"
