@@ -90,7 +90,7 @@ DATABASES = {
         "NAME": os.environ.get("SQL_DATABASE"),
         "USER": os.environ.get("SQL_USER"),
         "PASSWORD": os.environ.get("SQL_PASSWORD"),
-        "HOST": "db",
+        "HOST": os.environ.get("SQL_HOST"),
         "PORT": os.environ.get("SQL_PORT"),
     }
 }
@@ -142,3 +142,6 @@ STATICFILES_DIRS = [
     BASE_DIR.parent / "assets",
 ]
 STATIC_ROOT = BASE_DIR / "static"
+
+MEDIA_URL = "media/"
+MEDIA_ROOT = BASE_DIR / "media"

@@ -9,7 +9,6 @@ def basicView(request):
     if not objects:
         objects = Visitor()
         objects.save()
-        print("I am here")
 
     context = {"visitors": objects}
 
