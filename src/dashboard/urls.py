@@ -1,8 +1,6 @@
 from django.urls import path
-from .views import basicView, dataView, downloadView
+from .views import basicView
 
 urlpatterns = [
     path("", basicView),
-    path("data/", dataView),
-    path("download/", downloadView, name="download"),
 ]
